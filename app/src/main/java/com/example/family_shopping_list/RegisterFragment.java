@@ -1,6 +1,7 @@
 package com.example.family_shopping_list;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,14 +24,15 @@ import com.google.firebase.database.ValueEventListener;
 
 public class RegisterFragment extends Fragment {
 
-    EditText registerNameEt,registerPasswordEt,registerPasswordAgainEt;
-    Button registerBt;
+    private EditText registerNameEt,registerPasswordEt,registerPasswordAgainEt;
+    private Button registerBt;
 
-    String name,password,passwordAgain,message;
-    Family registingFamily;
+    private String name,password,passwordAgain,message;
+    private Family registingFamily;
 
-    FirebaseDatabase db;
-    DatabaseReference reference;
+    private FirebaseDatabase db;
+    private DatabaseReference reference;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

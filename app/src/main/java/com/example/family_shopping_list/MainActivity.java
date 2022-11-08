@@ -7,12 +7,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 
 public class MainActivity extends AppCompatActivity implements MainCallbackFragment  {
 
-    Fragment mainFragment;
-    FragmentManager mainFragmentManager;
-    FragmentTransaction mainFragmentTransaction;
+    private Fragment mainFragment;
+    private FragmentManager mainFragmentManager;
+    private FragmentTransaction mainFragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

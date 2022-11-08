@@ -13,12 +13,13 @@ import com.google.android.material.navigation.NavigationView;
 
 public class ShoppingMainActivity extends AppCompatActivity {
 
-    TextView familyTv;
-    BottomNavigationView menu;
+    private TextView familyTv;
+    static String familyName;
+    private BottomNavigationView menu;
 
-    ListFragment listFragment= new ListFragment();
-    ListAddFragment listAddFragment= new ListAddFragment();
-    SettingFragment settingFragment= new SettingFragment();
+    private ListFragment listFragment= new ListFragment();
+    private ListAddFragment listAddFragment= new ListAddFragment();
+    private SettingFragment settingFragment= new SettingFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class ShoppingMainActivity extends AppCompatActivity {
         Bundle extra=getIntent().getExtras();
         if(extra!=null){
             familyTv.setText(extra.getString("familyName") +" család");
+            familyName=extra.getString("familyName");
         }else{
             familyTv.setText("NULL család");
         }

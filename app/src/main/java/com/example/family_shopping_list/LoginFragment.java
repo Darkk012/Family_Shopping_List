@@ -1,6 +1,7 @@
 package com.example.family_shopping_list;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -22,22 +23,26 @@ import com.google.firebase.database.ValueEventListener;
 
 public class LoginFragment extends Fragment {
 
-    EditText loginNameEt,loginPasswordEt;
-    Button loginBt,registerFBt;
-    MainCallbackFragment mainCallbackFragment;
-    String name,password,message;
+    private EditText loginNameEt,loginPasswordEt;
+    private Button loginBt,registerFBt;
+    private MainCallbackFragment mainCallbackFragment;
+    private String name,password,message;
 
-    FirebaseDatabase db;
-    DatabaseReference reference;
+
+    private FirebaseDatabase db;
+    private DatabaseReference reference;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_login, container, false);
-
         loginNameEt=view.findViewById(R.id.loginNameEt);
         loginPasswordEt= view.findViewById(R.id.loginPasswordEt);
         loginBt=view.findViewById(R.id.loginBt);
         registerFBt=view.findViewById(R.id.registerFBt);
+
+
+        loginNameEt.setText("");
+        loginPasswordEt.setText("");
 
         db=FirebaseDatabase.getInstance();
         reference=db.getReference().child("families");
@@ -60,6 +65,8 @@ public class LoginFragment extends Fragment {
                                     i.putExtra("familyName", name);
                                     startActivity(i);
                                     notfFound = false;
+                                    loginNameEt.setText("");
+                                    loginPasswordEt.setText("");
                                 }
                             }
                             if (notfFound) {
