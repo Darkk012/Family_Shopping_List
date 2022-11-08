@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginFragment">
+
+    <EditText
+        android:id="@+id/loginNameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Felhasználónév"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/loginPasswordEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Jelszó"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Belépés" />
+
+    <Button
+        android:id="@+id/registerFBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regisztráció" />
+
+</LinearLayout>

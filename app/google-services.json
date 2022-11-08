@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "434426079621",
+    "firebase_url": "https://family-shopping-app-83eba-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "family-shopping-app-83eba",
+    "storage_bucket": "family-shopping-app-83eba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434426079621:android:feef9db32c032e9832bcec",
+        "android_client_info": {
+          "package_name": "com.example.family_shopping_list"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434426079621-2bhp4c9f6bnuf7mn55efltenm6snnear.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWt8ILm2hEBIKpEn8NWpA42nomq4u2OvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434426079621-2bhp4c9f6bnuf7mn55efltenm6snnear.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
