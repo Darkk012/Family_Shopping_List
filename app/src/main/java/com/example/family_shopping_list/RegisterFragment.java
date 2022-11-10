@@ -97,7 +97,7 @@ public class RegisterFragment extends Fragment {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(getContext(), "Database Error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Database Error"+error, Toast.LENGTH_SHORT).show();
                     }
                 });
             }

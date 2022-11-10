@@ -60,7 +60,7 @@ public class ListAddFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getContext(), "Database Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Database Error"+error, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -87,7 +87,7 @@ public class ListAddFragment extends Fragment {
                         public void onComplete(@NonNull Task<Void> task) {
                             AlertDialog.Builder success= new AlertDialog.Builder(getActivity());
                             success.setMessage("Termék hozzáadva!");
-                            success.setPositiveButton("Rendben",null);
+                            success.setPositiveButton("Oké",null);
                             success.create().show();
                             productNameEt.setText("");
                             productInformationEt.setText("");

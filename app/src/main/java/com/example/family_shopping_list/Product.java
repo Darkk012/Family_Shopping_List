@@ -52,4 +52,11 @@ public class Product {
     public void setInformation(String information) {
         this.information = information;
     }
+
+    @Override
+    public String toString() {
+        String message= "Termék: "+name+": \n Mennyiség: "+number;
+        if(!(information == null)) message+="\n Egyéb információ: "+information;
+        return message;
+    }
 }

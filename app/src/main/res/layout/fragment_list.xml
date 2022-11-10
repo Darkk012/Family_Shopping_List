@@ -21,6 +21,7 @@
         android:id="@+id/productsDeleteBt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="Megvásárolt termékek törlése"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
