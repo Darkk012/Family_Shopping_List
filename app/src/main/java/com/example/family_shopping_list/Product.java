@@ -55,7 +55,7 @@ public class Product {
 
     @Override
     public String toString() {
-        String message= "Termék: "+name+": \n Mennyiség: "+number;
+        String message= "Termék: "+name+" \n Mennyiség: "+number;
         if(!(information == null)) message+="\n Egyéb információ: "+information;
         return message;
     }

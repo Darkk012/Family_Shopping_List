@@ -64,6 +64,7 @@ public class RegisterFragment extends Fragment {
                         }
 
                         if(!name.equals("") && !password.equals("") &&
+                                !name.contains(" ")&& !password.contains(" ")&&
                                 password.equals(passwordAgain)&& !namein){
                             registingFamily.setName(name);
                             registingFamily.setPassword(password);
@@ -85,8 +86,10 @@ public class RegisterFragment extends Fragment {
                             AlertDialog.Builder notGood= new AlertDialog.Builder(getActivity());
                             message="Hiba: ";
                             if (name.equals("")) message += "\n - Nincs felhasználónév megadva";
+                            else if(name.contains(" ")) message+="\n - A névben nem lehet üres karakter";
                             else if(namein) message+= "\n - Ez a felhasználónév már foglalt";
                             if (password.equals("")) message += "\n - Nincs jelszó megadva";
+                            else if(password.contains(" ")) message += "\n - A jelszóban nem lehet üres karakter";
                             else if (!password.equals(passwordAgain)) message += "\n -A jelszavak nem egyeznek";
                             message += "!";
                             notGood.setMessage(message);

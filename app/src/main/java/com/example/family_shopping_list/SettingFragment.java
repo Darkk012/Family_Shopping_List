@@ -59,7 +59,7 @@ public class SettingFragment extends Fragment {
                             if(data.getKey().equals(newName))nameIn=true;
                         }
 
-                        if(!newName.equals("") && !nameIn){
+                        if(!newName.equals("")&& !newName.contains(" ") && !nameIn){
                             reference.child(ShoppingMainActivity.familyName).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -94,6 +94,7 @@ public class SettingFragment extends Fragment {
                             AlertDialog.Builder badName=new AlertDialog.Builder(getActivity());
                             message="Hiba: ";
                             if(newName.equals("")) message+="\n\t Üres nevet nem lehet megadni!";
+                            else if(newName.contains(" ")) message+= "\n\t Üres karaktert nem lehet megadni!";
                             else if (nameIn) message+="\n\t Ez a Név már foglalt!";
                             badName.setMessage(message).setPositiveButton("Oké",null).create().show();
                         }
@@ -118,8 +119,8 @@ public class SettingFragment extends Fragment {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                        if(!oldPassword.equals("") && snapshot.child("password").getValue().equals(oldPassword)&&
-                                !newPassword.equals("") && newPassword.equals(newPasswordAgain)) {
+                        if(!oldPassword.equals("")&& !oldPassword.contains(" ") && snapshot.child("password").getValue().equals(oldPassword)&&
+                                !newPassword.equals("") && !newPassword.contains(" ")&& newPassword.equals(newPasswordAgain)) {
                             reference.child(ShoppingMainActivity.familyName).child("password").setValue(newPassword)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
@@ -140,8 +141,10 @@ public class SettingFragment extends Fragment {
                             AlertDialog.Builder badPassword=new AlertDialog.Builder(getActivity());
                             message="Hiba: ";
                             if(oldPassword.equals("")) message+="\n\t Nem írta be a régi jelszót";
+                            else if(oldPassword.contains(" ")) message+="\n\t Üres karakter nem lehet a régi jelszóban";
                             else if(!snapshot.child("password").getValue().equals(oldPassword)) message+="\n\t A régi jelszó nem egyezik";
                             if(newPassword.equals("")) message+="\n\t Az új jelszó nem lehet üres";
+                            else if(newPassword.contains(" ")) message+="\n\t Üres karakter nem lehet az új jelszóban";
                             else if(!newPassword.equals(newPasswordAgain)) message+= "\n\t Az jelszavaknak egyenie kell";
                             message+="!";
                             badPassword.setMessage(message).setPositiveButton("Oké",null).create().show();

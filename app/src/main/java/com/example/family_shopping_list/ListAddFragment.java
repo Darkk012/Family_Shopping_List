@@ -67,8 +67,8 @@ public class ListAddFragment extends Fragment {
         listAddBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                productName=productNameEt.getText().toString();
-                productInformation=productInformationEt.getText().toString();
+                productName=productNameEt.getText().toString().trim();
+                productInformation=productInformationEt.getText().toString().trim();
                 productNumberString=productNumberEt.getText().toString();
                 if(!productNumberString.equals("")) {
                     productNumber = Integer.parseInt(productNumberString);
