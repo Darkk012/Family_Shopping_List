@@ -2,21 +2,54 @@
     <!-- Base application theme. -->
     <style name="Theme.Family_Shopping_List" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/red_button</item>
+        <item name="colorOnPrimary">@color/white_backGround</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="colorSecondary">@color/red_button_secondary</item>
+        <item name="colorOnSecondary">@color/black_text</item>
     </style>
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/white</item>
+
+    <style name="Theme.Family_Shopping_List.Layout" parent="Theme.Family_Shopping_List">
+        <item name="android:background">@color/white_backGround</item>
     </style>
+
+    <style name="Theme.Family_Shopping_List.Divider" parent="Theme.Family_Shopping_List">
+        <item name="dividerColor">@color/black_text_hint</item>
+    </style>
+
+    <style name="Theme.Family_Shopping_List.Button" parent="Theme.Family_Shopping_List">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:textColor">@color/white_backGround</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Theme.Family_Shopping_List.EditText" parent="Theme.Family_Shopping_List">
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textColorHint">@color/black_text_hint</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@drawable/rounded_edittext</item>
+        <item name="android:paddingLeft">13dp</item>
+    </style>
+
+    <style name="Theme.Family_Shopping_List.TextView" parent="Theme.Family_Shopping_List">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:layout_marginLeft">3dp</item>
+    </style>
+
+    <style name="Theme.Family_Shopping_List.Menu" parent="Theme.Family_Shopping_List">
+        <item name="itemIconSize">35dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Theme.Family_Shopping_List.List" parent="Theme.Family_Shopping_List">
+
+
+    </style>
+
 </resources>

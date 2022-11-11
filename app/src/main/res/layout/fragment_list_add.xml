@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
+    style="@style/Theme.Family_Shopping_List.Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListAddFragment" >
+    tools:context=".ListAddFragment">
 
     <TextView
         android:id="@+id/textView"
+        style="@style/Theme.Family_Shopping_List.TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -18,8 +20,9 @@
 
     <EditText
         android:id="@+id/productNameEt"
+        style="@style/Theme.Family_Shopping_List.EditText"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Termék neve"
         android:inputType="textPersonName"
@@ -28,15 +31,17 @@
 
     <TextView
         android:id="@+id/textView2"
+        style="@style/Theme.Family_Shopping_List.TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Egyéb információ"
+        android:text="Egyéb információ:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productNumberEt" />
 
     <EditText
         android:id="@+id/productInformationEt"
+        style="@style/Theme.Family_Shopping_List.EditText"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:ems="10"
@@ -48,6 +53,7 @@
 
     <Button
         android:id="@+id/listAddBt"
+        style="@style/Theme.Family_Shopping_List.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -57,6 +63,7 @@
 
     <TextView
         android:id="@+id/textView3"
+        style="@style/Theme.Family_Shopping_List.TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -66,11 +73,13 @@
 
     <EditText
         android:id="@+id/productNumberEt"
+        style="@style/Theme.Family_Shopping_List.EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Mennyiség"
         android:inputType="number"
+        android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

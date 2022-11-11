@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!--Sajat szinek-->
+    <color name="red_button">#FFDC0430</color>
+    <color name="red_button_secondary">#FFF00534</color>
+    <color name="white_backGround">#FFEBEBEB</color>
+    <color name="black_text">#FF1F1F1F</color>
+    <color name="black_text_hint">#FF666666</color>
+    <color name="gray_editText">#FFD6D6D6</color>
+
 </resources>

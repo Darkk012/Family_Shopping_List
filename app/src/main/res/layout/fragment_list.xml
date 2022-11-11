@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout2"
+    style="@style/Theme.Family_Shopping_List.Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListFragment" >
+    tools:context=".ListFragment">
 
     <ListView
         android:id="@+id/productsLV"
@@ -13,12 +14,14 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/buyProductsBt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
     </ListView>
 
     <Button
         android:id="@+id/buyProductsBt"
+        style="@style/Theme.Family_Shopping_List.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Kosárban lévő termékek megvásárlása"
@@ -27,6 +30,7 @@
 
     <Button
         android:id="@+id/productsDeleteBt"
+        style="@style/Theme.Family_Shopping_List.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -41,6 +45,7 @@
         android:clickable="true"
         android:src="@drawable/ic_help_foreground"
         app:layout_constraintBottom_toBottomOf="@+id/productsLV"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="40dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

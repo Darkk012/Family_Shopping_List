@@ -166,11 +166,11 @@ public class ListFragment extends Fragment {
                         View v= super.getView(position, convertView, parent);
                         TextView Tv=v.findViewById(android.R.id.text1);
                         if(productsArray[position].getState()==1){
-                            Tv.setTextColor(0xFF60F542);
+                            Tv.setTextColor(0xFF14591D);
                         }else if(productsArray[position].getState()==2){
-                            Tv.setTextColor(0xFFFFFF00);
+                            Tv.setTextColor(0xFFCC8B00);
                         }else if(productsArray[position].getState()==3){
-                            Tv.setTextColor(0xFFFF0000);
+                            Tv.setTextColor(0xFFBB342F);
                         }
                         return v;
                     }

@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/familyTv"
+        style="@style/Theme.Family_Shopping_List.TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -20,6 +21,7 @@
 
     <FrameLayout
         android:id="@+id/shoppingFrame"
+        style="@style/Theme.Family_Shopping_List.Layout"
         android:layout_width="match_parent"
         android:layout_height="731dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +31,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu"
+        style="@style/Theme.Family_Shopping_List.Menu"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
