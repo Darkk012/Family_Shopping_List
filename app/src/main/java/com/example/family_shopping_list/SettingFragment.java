@@ -94,9 +94,9 @@ public class SettingFragment extends Fragment {
                             AlertDialog.Builder badName=new AlertDialog.Builder(getActivity());
                             message="Hiba: ";
                             if(newName.equals("")) message+="\n\t Üres nevet nem lehet megadni!";
-                            else if(newName.contains(" ")) message+= "\n\t Üres karaktert nem lehet megadni!";
+                            else if(newName.contains(" ")) message+= "\n\t Szóközt nem lehet megadni!";
                             else if(newName.length()<3) message+="\n - A névnek minimum 3 karakter hosszúnak kell lennie";
-                            else if (nameIn) message+="\n\t Ez a Név már foglalt!";
+                            else if (nameIn) message+="\n\t Ez a név már foglalt!";
                             badName.setMessage(message).setPositiveButton("Oké",null).create().show();
                         }
                     }
@@ -143,10 +143,10 @@ public class SettingFragment extends Fragment {
                             AlertDialog.Builder badPassword=new AlertDialog.Builder(getActivity());
                             message="Hiba: ";
                             if(oldPassword.equals("")) message+="\n\t Nem írta be a régi jelszót";
-                            else if(oldPassword.contains(" ")) message+="\n\t Üres karakter nem lehet a régi jelszóban";
+                            else if(oldPassword.contains(" ")) message+="\n\t Szóköz nem lehet a régi jelszóban";
                             else if(!snapshot.child("password").getValue().equals(oldPassword)) message+="\n\t A régi jelszó nem egyezik";
                             if(newPassword.equals("")) message+="\n\t Az új jelszó nem lehet üres";
-                            else if(newPassword.contains(" ")) message+="\n\t Üres karakter nem lehet az új jelszóban";
+                            else if(newPassword.contains(" ")) message+="\n\t Szóköz nem lehet az új jelszóban";
                             else if(newPassword.length()<7) message+="\n - A jelszónak minimum 7 karakter hosszúnak kell lennie";
                             else if(!newPassword.equals(newPasswordAgain)) message+= "\n\t Az jelszavaknak egyenie kell";
                             if (oldPassword.equals(newPassword)) message+= "\n\t Az új jelszó nem lehet ugyan az mint a régi";
