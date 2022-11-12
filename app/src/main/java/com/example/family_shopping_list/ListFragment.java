@@ -127,14 +127,14 @@ public class ListFragment extends Fragment {
             public void onClick(View view) {
                 AlertDialog.Builder help=new AlertDialog.Builder(getActivity());
                 help.setMessage("Használati utasítások:" +
-                        "\n\t 1.A legbaloldali fülön lehet új terméket hozzáadni" +
-                        "\n\t 2.A középső fülön lehet a hozzáadott termékeket megtekinteni" +
-                        "\n\t 3.Szinkód: " +
-                        "\n\t\t-Zöld: A termék nincs a kosárban és nincs megvéve sem" +
-                        "\n\t\t-Sárga: A termék a kosárban van" +
-                        "\n\t\t-Piros: A termék megvan véve" +
-                        "\n\t 4.Termékek megvásárlása gomb: A kosárban lévő termékeket átváltosztatja megvettnek" +
-                        "\n\t 5.Megvásárolt termékek törlése gomb: A megvásárolt termékeket kitörli a listából");
+                        "\n1.A legbaloldali fülön lehet új terméket hozzáadni" +
+                        "\n2.A középső fülön lehet a hozzáadott termékeket megtekinteni" +
+                        "\n3.Szinkód: " +
+                        "\n\t-Zöld: A termék nincs a kosárban és nincs megvéve sem" +
+                        "\n\t-Sárga: A termék a kosárban van" +
+                        "\n\t-Piros: A termék megvan véve" +
+                        "\n4.Termékek megvásárlása gomb: A kosárban lévő termékeket átváltosztatja megvettnek" +
+                        "\n5.Megvásárolt termékek törlése gomb: A megvásárolt termékeket kitörli a listából");
                 help.setPositiveButton("Oké",null).create().show();
             }
         });

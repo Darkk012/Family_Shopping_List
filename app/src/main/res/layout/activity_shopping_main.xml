@@ -15,7 +15,6 @@
         android:gravity="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,11 +22,10 @@
         android:id="@+id/shoppingFrame"
         style="@style/Theme.Family_Shopping_List.Layout"
         android:layout_width="match_parent"
-        android:layout_height="731dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/menu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/familyTv" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu"
