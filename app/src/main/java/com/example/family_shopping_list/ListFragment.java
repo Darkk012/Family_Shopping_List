@@ -35,6 +35,7 @@ public class ListFragment extends Fragment {
     private ListView productsLV;
     private Product[] productsArray;
     private FloatingActionButton helpFab;
+    private ArrayAdapter<Product> adapter;
 
     private Handler handler;
     private Runnable runnable;
@@ -100,7 +101,7 @@ public class ListFragment extends Fragment {
                                 p.setNumber(Integer.parseInt(data.child("number").getValue().toString()));
                                 if(!data.child("information").getValue().equals("")){
                                     p.setInformation(data.child("information").getValue().toString());
-                                }
+                                }else p.setInformation("");
                                 p.setState(Integer.parseInt(data.child("state").getValue().toString()));
                                 pList.add(p);
                             }
@@ -159,7 +160,7 @@ public class ListFragment extends Fragment {
                     productsArray[i]=p;
                     i++;
                 }
-                ArrayAdapter<Product> adapter=new ArrayAdapter<Product>(getContext(), android.R.layout.simple_list_item_1,productsArray){
+                adapter=new ArrayAdapter<Product>(getContext(), android.R.layout.simple_list_item_1,productsArray){
                     @NonNull
                     @Override
                     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

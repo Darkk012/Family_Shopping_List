@@ -4,6 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/red_button</item>
         <item name="colorOnPrimary">@color/black_text</item>
+        <item name="colorPrimaryDark">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/red_button_secondary</item>
         <item name="colorOnSecondary">@color/white_backGround</item>
