@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Family_Shopping_List"
         tools:targetApi="31" >
         <activity
-            android:name=".ShoppingMainActivity"
+            android:name=".List.ShoppingMainActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"
@@ -23,7 +23,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Main.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" >

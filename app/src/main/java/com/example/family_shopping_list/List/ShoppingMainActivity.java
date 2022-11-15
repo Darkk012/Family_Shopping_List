@@ -1,4 +1,4 @@
-package com.example.family_shopping_list;
+package com.example.family_shopping_list.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.family_shopping_list.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.navigation.NavigationView;
 
 public class ShoppingMainActivity extends AppCompatActivity {
 

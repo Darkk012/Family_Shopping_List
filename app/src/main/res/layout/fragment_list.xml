@@ -6,7 +6,7 @@
     style="@style/Theme.Family_Shopping_List.Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListFragment">
+    tools:context=".List.ListFragment">
 
     <ListView
         android:id="@+id/productsLV"

@@ -6,7 +6,7 @@
     style="@style/Theme.Family_Shopping_List.Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingFragment">
+    tools:context=".List.SettingFragment">
 
     <view
         android:id="@+id/view2"

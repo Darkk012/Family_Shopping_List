@@ -1,7 +1,6 @@
-package com.example.family_shopping_list;
+package com.example.family_shopping_list.Main;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -15,6 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.family_shopping_list.R;
+import com.example.family_shopping_list.List.ShoppingMainActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -65,8 +66,8 @@ public class LoginFragment extends Fragment {
                                     i.putExtra("familyName", name);
                                     startActivity(i);
                                     notfFound = false;
-                                    loginNameEt.setText("");
-                                    loginPasswordEt.setText("");
+                                    loginNameEt.getText().clear();
+                                    loginPasswordEt.getText().clear();
                                 }
                             }
                             if (notfFound) {
@@ -111,5 +112,10 @@ public class LoginFragment extends Fragment {
         this.mainCallbackFragment=mainCallbackFragment;
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        loginNameEt.getText().clear();
+        loginPasswordEt.getText().clear();
+    }
 }

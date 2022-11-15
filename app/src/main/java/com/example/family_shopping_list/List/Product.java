@@ -1,4 +1,4 @@
-package com.example.family_shopping_list;
+package com.example.family_shopping_list.List;
 
 public class Product {
     private String name;

@@ -1,4 +1,4 @@
-package com.example.family_shopping_list;
+package com.example.family_shopping_list.List;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -18,6 +18,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.family_shopping_list.List.Product;
+import com.example.family_shopping_list.List.ShoppingMainActivity;
+import com.example.family_shopping_list.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

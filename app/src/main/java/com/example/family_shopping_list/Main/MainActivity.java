@@ -1,4 +1,4 @@
-package com.example.family_shopping_list;
+package com.example.family_shopping_list.Main;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,9 +7,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 
-public class MainActivity extends AppCompatActivity implements MainCallbackFragment  {
+import com.example.family_shopping_list.R;
+
+public class MainActivity extends AppCompatActivity implements MainCallbackFragment {
 
     private Fragment mainFragment;
     private FragmentManager mainFragmentManager;

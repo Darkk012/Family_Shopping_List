@@ -1,7 +1,7 @@
-package com.example.family_shopping_list;
+package com.example.family_shopping_list.Main;
 
 import android.app.AlertDialog;
-import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.family_shopping_list.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -74,11 +75,16 @@ public class RegisterFragment extends Fragment {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             AlertDialog.Builder success= new AlertDialog.Builder(getActivity());
                                             success.setMessage("Sikeres regisztráció!");
-                                            success.setPositiveButton("Oké",null);
-                                            success.create().show();
-                                            registerNameEt.setText("");
-                                            registerPasswordEt.setText("");
-                                            registerPasswordAgainEt.setText("");
+                                            success.setPositiveButton("Oké", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialogInterface, int i) {
+                                                    getParentFragmentManager().popBackStack();
+                                                }
+                                            });
+                                            success.setCancelable(false).create().show();
+                                            registerNameEt.getText().clear();
+                                            registerPasswordEt.getText().clear();
+                                            registerPasswordAgainEt.getText().clear();
                                         }
                                     });
 
