@@ -78,7 +78,7 @@ public class SettingFragment extends Fragment {
                                                                      startActivity(intent);
                                                                      getActivity().finish();
                                                                  }
-                                                             }).create().show();
+                                                             }).setCancelable(false).create().show();
                                                  }
                                              });
                                             }
@@ -136,7 +136,7 @@ public class SettingFragment extends Fragment {
                                                     startActivity(intent);
                                                     getActivity().finish();
                                                 }
-                                            }).create().show();
+                                            }).setCancelable(false).create().show();
                                 }
                             });
                         }else{
